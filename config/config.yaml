@@ -1,0 +1,11 @@
+listen: ':4000'
+label_order: #用于生成索引树,靠后优先级越高
+ - 'metrics_path'
+ - 'service'
+ - 'job'
+ - 'container'
+ - 'pod'
+ - 'namespace'
+ - 'node'
+ - 'environment'
+ - 'endpoint'

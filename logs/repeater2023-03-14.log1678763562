@@ -1,0 +1,16 @@
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.9.0
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:4000
+{"time":"2023-03-14T10:50:01.146476+08:00","level":"INFO","prefix":"echo","file":"webhook.go","line":"56","message":"2023-03-14 10:50:01.145091 +0800 CST m=+219.360414840 map[alertname:MemoryLow app_kubernetes_io_name:node-exporter app_kubernetes_io_version:v1.0.1 container:node-exporter endpoint:https environment:k8s instance:192.168.1.163:9100 job:node-exporter namespace:monitoring pod:node-exporter-n74nf service:node-exporter service_name:node-exporter-192.168.1.163 severity:high] map[message:192.168.1.163:9100 Memory greater than 90%(Currently used:60.152562073213%) summary:192.168.1.163:9100 High memory usage]"}
+{"time":"2023-03-14T10:50:01.149325+08:00","level":"INFO","prefix":"echo","file":"webhook.go","line":"74","message":"报警测试[飞书测试] [zhouhao] map[critical:[dingtalk wecom lark] high:[dingtalk wecom lark] info:[dingtalk wecom lark] warning:[dingtalk wecom lark]]"}
+{"time":"2023-03-14T10:50:02.266166+08:00","level":"INFO","prefix":"echo","file":"webhook.go","line":"56","message":"2023-03-14 10:50:02.266112 +0800 CST m=+220.481473893 map[alertname:MemoryLow app_kubernetes_io_name:node-exporter app_kubernetes_io_version:v1.0.1 container:node-exporter endpoint:https environment:k8s instance:192.168.30.46:9100 job:node-exporter namespace:monitoring pod:node-exporter-j68m6 service:node-exporter service_name:node-exporter-192.168.30.46 severity:high] map[message:192.168.30.46:9100 Memory greater than 90%(Currently used:58.512271363708734%) summary:192.168.30.46:9100 High memory usage]"}
+{"time":"2023-03-14T10:50:02.26628+08:00","level":"ERROR","prefix":"echo","file":"webhook.go","line":"68","message":"rule: default not fount"}
+{"time":"2023-03-14T10:55:45.537369+08:00","level":"ERROR","prefix":"echo","file":"main.go","line":"56","message":"wecom-default is nil, not *wecom.WeCom"}
+{"time":"2023-03-14T10:55:50.51302+08:00","level":"ERROR","prefix":"echo","file":"main.go","line":"56","message":"wecom-default is nil, not *wecom.WeCom"}

@@ -1,0 +1,12 @@
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.9.0
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:4000
+{"time":"2023-03-07T17:21:59.199806+08:00","level":"ERROR","prefix":"echo","file":"main.go","line":"54","message":"no such table: dingtalk_credential"}
+{"time":"2023-03-07T17:22:05.052112+08:00","level":"ERROR","prefix":"echo","file":"main.go","line":"54","message":"no such table: dingtalk_credential"}
