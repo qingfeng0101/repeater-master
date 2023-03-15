@@ -21,3 +21,22 @@
 
 8. 修改alter服务的配置文件把webhook的url指向本服务，http://xxxxx:4000/api/prometheus/alert/receiver
 ![image](https://user-images.githubusercontent.com/84072034/225259156-b5d4b3c5-e188-408e-b8aa-67a9fa4e0a16.png)
+
+容器镜像地址：registry.cn-beijing.aliyuncs.com/public-lib/webhook-admin:latest
+
+后端接口信息：
+ base_url: http://10.8.12.152:4000 
+ send_api: /api/sender/send
+ send_tag: bounce 这个转发器名字 
+ auth_api: /api/user/login 登陆接口
+ username: '用户名字'
+ password: '密码'
+
+
+
+
+
+
+
+
+
