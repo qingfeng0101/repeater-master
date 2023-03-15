@@ -1,0 +1,1 @@
+import{a as t}from "./315a852e.js";function r(){return t.get("/api/sender")}function a(e){return t.get(`/api/sender/set/${e}`)}function i(){return t.get("/api/sender/set")}function d(e){return t.post("/api/sender/set",e)}function u(e){return t.delete(`/api/sender/set/${e}`)}function o(e, s){return t.put(`/api/sender/set/${e}`,s)}export{i as a,u as b,a as c,o as d,d as e,r as s};

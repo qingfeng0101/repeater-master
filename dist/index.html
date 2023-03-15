@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <style>
+    html,
+    body,
+    #app {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index.148f4d09.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/315a852e.js">
+  <link rel="stylesheet" href="/assets/8dfca375.css">
+  <link rel="stylesheet" href="/assets/d5b67855.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class='loading'>
+      <div class='circle'></div>
+      <div class='circle'></div>
+      <div class='circle'></div>
+      <div class='circle'></div>
+      <div class='circle'></div>
+    </div>
+    <style>
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 50px;
+        height: 50px;
+        margin: auto;
+      }
+
+      .loading .circle {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        opacity: 0;
+        transform: rotate(225deg);
+        animation-iteration-count: infinite;
+        animation-name: orbit;
+        animation-duration: 5.5s;
+      }
+
+      .loading .circle:after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        background: #cccccc;
+        box-shadow: 0 0 9px #ccccccb3;
+      }
+
+      .loading .circle:nth-child(2) {
+        animation-delay: 240ms;
+      }
+
+      .loading .circle:nth-child(3) {
+        animation-delay: 480ms;
+      }
+
+      .loading .circle:nth-child(4) {
+        animation-delay: 720ms;
+      }
+
+      .loading .circle:nth-child(5) {
+        animation-delay: 960ms;
+      }
+
+      @keyframes orbit {
+        0% {
+          transform: rotate(225deg);
+          opacity: 1;
+          animation-timing-function: ease-out;
+        }
+
+        7% {
+          transform: rotate(345deg);
+          animation-timing-function: linear;
+        }
+
+        30% {
+          transform: rotate(455deg);
+          animation-timing-function: ease-in-out;
+        }
+
+        39% {
+          transform: rotate(690deg);
+          animation-timing-function: linear;
+        }
+
+        70% {
+          transform: rotate(815deg);
+          opacity: 1;
+          animation-timing-function: ease-out;
+        }
+
+        75% {
+          transform: rotate(945deg);
+          animation-timing-function: ease-out;
+        }
+
+        76% {
+          transform: rotate(945deg);
+          opacity: 0;
+        }
+
+        100% {
+          transform: rotate(945deg);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      function addThemeColorCssVars() {
+        let themeColor = '#5ac8fa';
+
+        const json = window.sessionStorage.getItem('theme');
+        if (json) {
+          themeColor = JSON.parse(json)?.primaryColor;
+        }
+
+        const cssVars = `--primary-color: ${themeColor}`;
+        document.documentElement.style.cssText = cssVars;
+      }
+      addThemeColorCssVars();
+    </script>
+  </div>
+  
+</body>
+
+</html>

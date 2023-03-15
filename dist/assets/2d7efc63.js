@@ -1,0 +1,1 @@
+import{a as c}from "./315a852e.js";function o(){return c.get("/api/contact")}function e(t){return c.get(`/api/contact/${t}`)}function i(t){return c.post("/api/contact",t)}function r(t, n){return c.put(`/api/contact/${t}`,n)}function u(t){return c.delete(`/api/contact/${t}`)}function s(){return c.post("/api/contact/sync")}export{u as a,s as b,o as c,e as d,r as e,i as f};
