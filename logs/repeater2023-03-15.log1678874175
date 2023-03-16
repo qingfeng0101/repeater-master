@@ -1,0 +1,11 @@
+
+   ____    __
+  / __/___/ /  ___
+ / _// __/ _ \/ _ \
+/___/\__/_//_/\___/ v4.9.0
+High performance, minimalist Go web framework
+https://echo.labstack.com
+____________________________________O/_______
+                                    O\
+⇨ http server started on [::]:4000
+{"time":"2023-03-15T17:54:25.638958+08:00","level":"ERROR","prefix":"echo","file":"main.go","line":"56","message":"bad_response: invalid character '<' looking for beginning of value"}

@@ -221,13 +221,11 @@ func (d *DingDing) Send(contacts []models.Contact, subject, contentType string, 
 	//if contentType == "html" {
 	//	return errors.New("企业微信 暂时不支持html类型消息")
 	//}
-   fmt.Println("发消息1111")
 	var to []string
 	var tod []string
 	var mmui NameMapUserID
 	err := d.CheckAccessToken()
 	if err != nil{
-		fmt.Println("send CheckAccessToken err: ",err)
 		return err
 	}
 	for _, contact := range contacts {

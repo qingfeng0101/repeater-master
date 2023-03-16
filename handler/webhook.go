@@ -51,7 +51,6 @@ func WebHookReceiver(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 	for _, alert := range message.Alerts {
-
 		c.Logger().Info(time.Now(), alert.Labels, alert.Annotations)
 		indexes := sender.Indexes{}
 		for k, v := range alert.Labels {
@@ -61,7 +60,6 @@ func WebHookReceiver(c echo.Context) error {
 		if ruleName == "" {
 			ruleName = "default"
 		}
-
 		rule := sender.NotifyRuleRepos().Get(ruleName)
 		if rule == nil {
 			c.Logger().Errorf("rule: %s not fount", string(ruleName))
@@ -72,9 +70,7 @@ func WebHookReceiver(c echo.Context) error {
 		t.Execute(buf, alert)
 		c.Logger().Info(ruleName, rule.SenderSet, rule.Contacts, rule.SenderFilter)
 		severity := alert.Labels["severity"]
-
 		for _, s := range rule.SenderSet {
-
 			der := sender.SenderRepos().Get(s)
 			if _, ok := Find(rule.SenderFilter[sender.Severity(severity)], der.Type()); ok {
 				var contacts []models.Contact
@@ -84,9 +80,7 @@ func WebHookReceiver(c echo.Context) error {
 					c.Logger().Error(err)
 				}
 			}
-
 		}
-
 	}
 
 	return c.NoContent(http.StatusNoContent)

@@ -123,12 +123,15 @@ func ReadPrometheusAlerts(c echo.Context) error {
 
 	var pdss []models.PrometheusDataSource
 	if err := models.DB.Find(&pdss).Error; err != nil {
+
 		return err
 	}
+
 	var alerts []v1.Alert
 	for _, pds := range pdss {
 		client, err := api.NewClient(pds.BaseUrl)
 		if err != nil {
+
 			return err
 		}
 
@@ -138,12 +141,15 @@ func ReadPrometheusAlerts(c echo.Context) error {
 		if pds.Alerts == "" {
 			continue
 		}
+
 		ar, err := v1api.Alerts(ctx, pds.Alerts)
 		if err != nil {
+
 			return err
 		}
 		alerts = append(alerts, ar...)
 	}
+
 
 	return c.JSON(http.StatusOK, alerts)
 }
