@@ -16,6 +16,7 @@ const filePath = "config/config.yaml"
 type Config struct {
 	Listen     string            `yaml:"listen"`
 	LabelOrder []model.LabelName `yaml:"label_order"`
+	DataPath   string            `yaml:"data_path"`
 }
 
 func (c *Config) LoadEnvVars() {

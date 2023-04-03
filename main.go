@@ -24,7 +24,11 @@ import (
 
 func main() {
 	// db, err := gorm.Open(mysql.Open("uommp:Pmmou180!@tcp(192.168.2.180:3306)/ommp"), &gorm.Config{})
-	db, err := gorm.Open(sqlite.Open("data.db"), &gorm.Config{})
+	conf := config.Get()
+	if conf.DataPath == ""|| conf.DataPath == " " {
+		conf.DataPath = "data.db"
+	}
+	db, err := gorm.Open(sqlite.Open(conf.DataPath), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
 	}
@@ -47,7 +51,7 @@ func main() {
 	router.AddOld(e)
 	router.AddApi(e)
 
-	conf := config.Get()
+
 	e.Start(conf.Listen)
 
 }
