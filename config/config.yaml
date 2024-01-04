@@ -1,4 +1,5 @@
 listen: ':4000'
+dataPath: 'data.db'
 label_order: #用于生成索引树,靠后优先级越高
  - 'metrics_path'
  - 'service'
